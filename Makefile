@@ -1,3 +1,16 @@
-# Print out file information about every .c file
-print: $(wildcard *.c)
-	ls -la  $?
+hey: one two
+	echo $@
+	echo $?
+	echo $^
+	touch hey
+
+one:
+	touch one
+
+two:
+	touch two
+
+clean:
+	rm -f hey one two
+
+
